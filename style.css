@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@300..700&display=swap');
+
+*{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#pageOne{
+    display: grid;
+    grid-template-areas: 'H H' 'L R';
+    grid-template-rows: 10vh auto;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+#L, #R{
+
+}
+
+#H{
+    display: flex;
+    grid-area: H;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    gap: 5vw;
+}
+#H a{
+    text-decoration: none;
+    color: gray;
+
+}
+.pushRight{
+    margin-left: auto;
+}
+#headerLinks{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+#L{
+    grid-area: L;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#actorInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vh;
+}
+#actorInfo h1{
+    font-size: 4rem;
+    padding-bottom: 10vh;
+}
+#actorInfo h2{
+    font-size: 1.5rem;
+    color: rgb(122, 122, 122);
+}
+.buttonOne{
+    border: none;
+    padding: .1vw 2vw;
+    border-radius: 4px;
+    background: rgb(40, 40, 40);
+    color: rgb(207, 207, 207);
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+#R{
+    grid-area: R;
+    background: url(output.jpg);
+    background-position: center 0;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1000px) {
+    #pageOne{
+        display: grid;
+        grid-template-areas: 'H''R''L';
+        grid-template-rows: 5vh 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
